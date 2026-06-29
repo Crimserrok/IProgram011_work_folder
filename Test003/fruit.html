@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let fruit = ["ส้มโอ", "มะม่วง", "ทุเรียน", "แตงโม", "มะพร้าว"];
+      let price = [80, 50, 159, 60, 20];
+      let unit = ["ลูก", "โล", "โล", "ลูก", "ลูก"];
+      let qty = [5, 3, 4, 8, 7];
+      let sum,
+        net = 0;
+      document.write("<table border=1>");
+      document.write(
+        "<tr><th>ผลไม้</th><th>จำนวน</th><th>ราคา</th><th>รวม</th></tr>",
+      );
+      for (i = 0; i < fruit.length; i++) {
+        document.write(
+          "<tr><td><img src='image/f",
+          i + 1,
+          ".jpg' style='width: 50px'></td>" + "<td>",
+          qty[i],
+          "</td>" + "<td>",
+          price[i],
+          "</td>" + "<td>",
+          (sum = qty[i] * price[i]),
+          "</td></tr>",
+        );
+        net += sum;
+      }
+      document.write("</table>");
+      document.write("<h3>ราคารวม ", net, "</h3>");
+    </script>
+  </body>
+</html>

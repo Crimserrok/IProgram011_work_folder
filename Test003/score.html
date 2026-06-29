@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      let s1,
+        s2,
+        s3,
+        name,
+        grade = null;
+      name = "jone doe";
+      s1 = 25;
+      s2 = 20;
+      s3 = 30;
+      let net = s1 + s2 + s3;
+      if (net >= 80) grade = "A";
+      else if (net >= 75) grade = "B+";
+      else if (net >= 70) grade = "B";
+      else if (net >= 65) grade = "C+";
+      else if (net >= 60) grade = "C";
+      else if (net >= 55) grade = "D+";
+      else if (net >= 50) grade = "D";
+      else grade = "F";
+      document.write("<h2>", name, " Grade:", grade, "</h2>");
+    </script>
+  </body>
+</html>
