@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let score = [78, 92, 45, 67, 88, 54, 39, 81, 95, 72];
+        let sum = score.reduce((a,b) => a+b,0);
+        let ave = sum/score.length;
+        let pass=0,fail=0;
+        for(i of score){
+            if(i>=50){
+                pass+=1;
+            }
+            if(i<50){
+                fail+=1;
+            }
+        }
+        document.write("<h2>",score,"<h2>");
+        document.write("<h2>คะแนนรวม : ",sum,"<h2>");
+        document.write("<h2>คะแนนเฉลี่ย : ",ave,"<h2>");
+        document.write("<h2>จำนวนคนผ่าน : ",pass,"<h2>");
+        document.write("<h2>จำนวนคนตก : ",fail,"<h2>");
+    </script>
+</body>
+</html>

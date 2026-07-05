@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sale = [120, 85, 150, 95, 200, 60, 175];
+        let day=1;
+        let grade;
+        let sum = sale.reduce((a,b)=>a+b,0);
+        let ave = sum/sale.length;
+        for(i of sale){
+            if(i<100){
+                grade="Need Improvement"
+            }
+            else if(i<=150){
+                grade="Good"
+            }
+            else if(i>=175){
+                grade="Excellent"
+            }
+            document.write("<h2>Day",day,": ",i," Cups - ",grade);
+            day++;
+        }
+        document.write("<hr><h2>Total Sales : ",sum," Cups<h2>");
+        document.write("<h2>Average Sales : ",ave.toFixed(2)," Cups<h2>");
+        document.write("<h2>Highest Sales :",Math.max(...sale)," Cups<h2>");
+        document.write("<h2>Lowest Sales :",Math.min(...sale)," Cups<h2>");
+
+    </script>
+</body>
+</html>
