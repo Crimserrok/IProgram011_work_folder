@@ -1,0 +1,26 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>Add Product</h1>
+        <input id="pname" type="text" placeholder="ใส่ชื่อผลิตภัณฑ์">
+        <button>sumbit</button>
+        <ul id="list">
+
+        </ul>
+        <script>
+            const but=document.querySelector("button");
+            const list=document.querySelector("#list");
+            but.addEventListener("click",()=>{
+                const item = document.createElement("li");
+                const newitem = document.getElementById("pname").value;
+                if(newitem!=null){
+                    item.innerText=newitem;
+                    list.appendChild(item);
+                    document.getElementById("pname").value="";
+                }
+            });
+        </script> 
+    </body> 
+</html>

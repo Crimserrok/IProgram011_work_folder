@@ -1,0 +1,43 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <h1>มหาวิทยาลัยราชภัฏนครปฐม</h1>
+        <input id="score" type="text" placeholder="ใส่คะแนนเพื่อคำนวณเกรด">
+        <button>sumbit</button>
+        <h1 id="grade">Grade: </h1>
+        <script>
+            const but=document.querySelector("button");
+            const grade=document.getElementById("grade");
+            but.addEventListener("click",()=>{
+                const score=parseInt(document.getElementById("score").value);
+                if(score>80){
+                    grade.textContent="Grade: A"
+                }
+                else if(score>74){
+                    grade.textContent="Grade: B+"
+                }
+                else if(score>69){
+                    grade.textContent="Grade: B"
+                }
+                else if(score>64){
+                    grade.textContent="Grade: C+"
+                }
+                else if(score>59){
+                    grade.textContent="Grade: C"
+                }
+                else if(score>54){
+                    grade.textContent="Grade: D+"
+                }
+                else if(score>49){
+                    grade.textContent="Grade: D"
+                }
+                else{
+                    grade.textContent="Grade: E"
+                }
+            });
+
+        </script> 
+    </body> 
+</html>

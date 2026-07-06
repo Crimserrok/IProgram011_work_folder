@@ -1,0 +1,23 @@
+<html>
+    <head>
+        
+    </head>
+    <body>
+        <button id="blue">blue</button>
+        <button id="red">red</button>
+        <button id="green">green</button>
+        <script>
+            const body=document.querySelector("body");
+            const blue=document.getElementById("blue");
+            blue.addEventListener("click",()=>{
+                body.style.backgroundColor="blue";
+            });
+            red.addEventListener("click",()=>{
+                body.style.backgroundColor="red";
+            });
+            green.addEventListener("click",()=>{
+                body.style.backgroundColor="green";
+            });
+        </script> 
+    </body> 
+</html>
